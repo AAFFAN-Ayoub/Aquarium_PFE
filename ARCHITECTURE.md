@@ -15,7 +15,7 @@ Le microcontrôleur ESP32-S3 est totalement autonome.Mais Il peux reçevoir d'or
 *   **Fusion de Capteurs & Sécurité :** L'ESP32 croise les données de l'ultrason et du flotteur. Si un manque d'eau est détecté, un **"Kill-Switch" matériel** coupe instantanément le chauffage et la filtration pour éviter les incendies.
 *   **Fail-Safe :** En l'absence de capteur d'oxygène, le système applique un principe de précaution : le bulleur d'oxygène est activé en permanence, ou forcé en cas de dérive de la pollution (TDS) ou du pH.
 *   **Horloge Biologique :** L'ESP32 se synchronise via NTP pour simuler le cycle naturel du soleil avec un éclairage LED PWM. Il gère également un distributeur automatique de nourriture (Servomoteur).
-*   **TinyML (Intelligence Artificielle) :** Un modèle K-Means (entraîné via Edge Impulse) tourne localement sur l'ESP32. Il analyse les variations multidimensionnelles (Température, pH, TDS) pour générer un `anomaly_score`. Si ce score dépasse 0.5, l'ESP32 ajoute une alerte `IA_DERIVE_DETECTEE` au payload JSON.
+*   **TinyML (Intelligence Artificielle) :** Un modèle K-Means (entraîné via Edge Impulse) tourne localement sur l'ESP32. Il analyse les variations multidimensionnelles (Température, pH, TDS) pour générer un `anomaly_score`. Si ce score dépasse 5, l'ESP32 ajoute une alerte `IA_DERIVE_DETECTEE` au payload JSON.
 
 ### 2.2. Couche 2 : La Passerelle de Données (Raspberry Pi 4B)
 Le Raspberry Pi joue le rôle de routeur et d'amortisseur Big Data (sans Docker, pour préserver la RAM). L'ancien script intermédiaire Python (`edge_bridge.py`) a été supprimé au profit d'outils industriels :
