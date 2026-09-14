@@ -188,10 +188,9 @@ Cette route sert uniquement au diagnostic local. Une réponse positive confirme 
 
 ### 5. Installer l’interface web
 
-*(Note : Si le code source de l'interface n'est pas encore présent à côté de `Figma maquette`, créez un répertoire dédié tel que `aquarium-frontend`)*
 
 ```bash
-cd aquarium-frontend
+cd Figma maquette
 npm install
 npm run build
 
