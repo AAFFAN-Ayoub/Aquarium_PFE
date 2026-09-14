@@ -198,19 +198,6 @@ npm run build
 
 L’interface doit être configurée avec les paramètres du projet Firebase avant sa compilation ou son déploiement.
 
-## Sécurité des informations sensibles
-
-Les informations suivantes ne doivent pas être publiées dans le dépôt (ajoutez-les à votre fichier `.gitignore`) :
-
-* mots de passe Wi-Fi ;
-* jetons InfluxDB ;
-* comptes de service Firebase ;
-* clés privées ;
-* identifiants administrateur ;
-* fichiers `.env` contenant des informations sensibles.
-
-Un fichier `.env.example` peut être fourni pour indiquer les paramètres nécessaires sans exposer leurs valeurs réelles.
-
 ## Limites de la version actuelle
 
 * Le modèle K-Means dépend de la représentativité des données utilisées pendant l’entraînement.
